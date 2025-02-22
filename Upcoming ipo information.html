@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register IPO Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #343a40;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 12px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover, .sidebar .active {
+            background-color: #495057;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
+        .company-info {
+            font-size: 14px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-center text-white">Bluestock Fintech</h4>
+        <a href="Daseboard.html">Dashboard</a>
+        <a href="#" class="active">Manage IPO</a>
+        <a href="#">IPO Subscription</a>
+        <a href="#">IPO Allotment</a>
+        <hr class="text-white">
+        <a href="#">Settings</a>
+        <a href="#">API Manager</a>
+        <a href="#">Accounts</a>
+        <a href="#">Help</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Upcoming IPO Information</h2>
+            <div>
+                <button class="btn btn-primary">Register</button>
+                <button class="btn btn-outline-secondary">Cancel</button>
+            </div>
+        </div>
+
+        <div class="card p-4 mt-3">
+            <h4>IPO Information</h4>
+            <p class="text-muted">Enter IPO Details</p>
+
+            <!-- NSE India Default Logo & Text -->
+            <div class="logo-container">
+                <img id="logoPreview" class="logo-preview" src="https://www.nseindia.com/assets/images/NSE_Logo.svg" alt="NSE India Logo">
+                <div>
+                    <strong>NSE India</strong>
+                    <p class="company-info">Track, Lead, Parse</p>
+                    <input type="file" id="logoUpload" accept="image/*" class="form-control mt-2">
+                    <button class="btn btn-danger btn-sm mt-2" onclick="removeLogo()">Delete</button>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control" value="Vodafone Idea">
+                </div>
+                <div class="col-md-6">
+                    <label>Price Band</label>
+                    <input type="text" class="form-control" value="Not Issued">
+                </div>
+                <div class="col-md-6">
+                    <label>Open</label>
+                    <input type="text" class="form-control" value="Not Issued">
+                </div>
+                <div class="col-md-6">
+                    <label>Close</label>
+                    <input type="text" class="form-control" value="Not Issued">
+                </div>
+                <div class="col-md-6">
+                    <label>Issue Size</label>
+                    <input type="text" class="form-control" value="2300 Cr.">
+                </div>
+                <div class="col-md-6">
+                    <label>Issue Type</label>
+                    <select class="form-select">
+                        <option selected>Select Issue Type</option>
+                        <option>Book Built</option>
+                        <option>Fixed Price</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label>Listing Date</label>
+                    <input type="text" class="form-control" value="Not Issued">
+                </div>
+                <div class="col-md-6">
+                    <label>Status</label>
+                    <select class="form-select">
+                        <option selected>Select Status</option>
+                        <option>Upcoming</option>
+                        <option>Ongoing</option>
+                        <option>Listed</option>
+                    </select>
+                </div>
+            </div>
+
+            <h5 class="mt-4">New Listed IPO Details (When IPO Gets Listed)</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>IPO Price</label>
+                    <input type="text" class="form-control" value="₹383">
+                </div>
+                <div class="col-md-6">
+                    <label>Listing Price</label>
+                    <input type="text" class="form-control" value="₹435">
+                </div>
+                <div class="col-md-6">
+                    <label>Listing Gain</label>
+                    <input type="text" class="form-control" value="13.58%">
+                </div>
+                <div class="col-md-6">
+                    <label>Listing Date</label>
+                    <input type="text" class="form-control" value="2024-05-30">
+                </div>
+                <div class="col-md-6">
+                    <label>CMP</label>
+                    <input type="text" class="form-control" value="₹410">
+                </div>
+                <div class="col-md-6">
+                    <label>Current Return</label>
+                    <input type="text" class="form-control" value="7.05%">
+                </div>
+                <div class="col-md-6">
+                    <label>RHP</label>
+                    <input type="text" class="form-control" placeholder="Enter RHP PDF Link">
+                </div>
+                <div class="col-md-6">
+                    <label>DRHP</label>
+                    <input type="text" class="form-control" placeholder="Enter DRHP PDF Link">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Function to Preview Uploaded Logo
+        document.getElementById("logoUpload").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("logoPreview").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Function to Remove Logo & Reset to NSE India
+        function removeLogo() {
+            document.getElementById("logoPreview").src = "https://upload.wikimedia.org/wikipedia/en/3/3d/National_Stock_Exchange_of_India_Logo.svg";
+            document.getElementById("logoUpload").value = "";
+        }
+    </script>
+
+</body>
+</html>

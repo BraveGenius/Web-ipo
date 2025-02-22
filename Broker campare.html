@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; text-align: center; }
+        .btn-primary { background-color: #007bff; border-color: #007bff; }
+        .symbol-list { list-style-type: none; padding: 0; }
+        .symbol-list li { display: flex; align-items: center; padding: 10px 0; }
+        .symbol-list img { width: 30px; height: 30px; margin-right: 10px; }
+        .logo { width: 100px; height: auto; }
+        .rating { font-size: 24px; color: #ffcc00; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="Daseboard.html">BLUESTOCK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.bluestock.com/products">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.bluestock.com/community">COMMUNITY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.bluestock.com/media">MEDIA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="all brokers.html">BROKERS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.bluestock.com/live-news">LIVE NEWS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.bluestock.com/new">NEW</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="signup.html">Sign Up Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="symbol-list">
+                    <ul>
+                        <li><img src="https://th.bing.com/th/id/OIP.926ZUWL89BUXBseHzWVOAQAAAA?w=180&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Active Clients"> Active Clients</li>
+                        <li><img src="https://th.bing.com/th/id/OIP.LZtPNDJrzzSNQ9U6K4JdQQHaEK?w=319&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"> Charges</li>
+                        <li><img src="https://th.bing.com/th/id/OIP.weXkDEgMy5KwBRpEKcK_5gHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"> Complaints</li>
+                        <li><img src="https://th.bing.com/th/id/OIP.tRmBozYlFANEibkgLOBxvwHaFO?w=225&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"> Share Holding</li>
+                        <li><img src="https://th.bing.com/th/id/OIP.Mzc4m5cLJoErLLaUlPz4HQHaFL?w=217&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"> Pros & Cons</li>
+                        <li><img src="https://th.bing.com/th/id/OIP.Lw0FFJ3ZJ3BPytfsQOkdvgHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"> Ratings</li>
+                        <li><img src="https://th.bing.com/th/id/OIP.MJ3t74QniE6kylxiIWYKqAHaHa?w=89&h=89&c=1&rs=1&qlt=90&r=0&dpr=1.3&pid=InlineBlock" alt="Financials"> Financials</li>
+                    </ul>
+                    
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="card p-3">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5>Angel One</h5>
+                            <img src="https://th.bing.com/th/id/OIP.dFk-omU-lyzOGZ2z4Me6QAHaHa?w=176&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Angel One Logo" class="logo">
+                            <p class="rating">⭐ 4.7</p>
+                            <a href="https://www.angelone.in" class="btn btn-primary" target="_blank">Open Demat Account</a>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>VS</h5>
+                        </div>
+                        <div class="col-md-5">
+                            <h5>Zerodha</h5>
+                            <img src="https://th.bing.com/th/id/OIP.ha9bOBx81vSww1HZzRBSNwAAAA?w=242&h=36&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Zerodha Logo" class="logo">
+                            <p class="rating">⭐ 4.6</p>
+                            <a href="https://zerodha.com/open-account" class="btn btn-primary" target="_blank">Open Demat Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .btn-primary { background-color: #007bff; border-color: #007bff; }
+        .symbol-list { list-style-type: none; padding: 0; }
+        .symbol-list li { display: flex; align-items: center; padding: 10px 0; }
+        .broker-card { text-align: center; padding: 20px; }
+        .rating { font-size: 1.5rem; color: #ffcc00; }
+        .table thead { background-color: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="card p-3 mt-4">
+            <h5>Active Clients</h5>
+            <canvas id="activeClientsChart"></canvas>
+        </div>
+        <div class="card p-3 mt-4">
+            <h5>Account Opening and Maintenance Charges</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Charges</th>
+                        <th>Angel One</th>
+                        <th>Zerodha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Account Opening Charges</td>
+                        <td>0</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>Account Maintenance Charges</td>
+                        <td>₹0 for the first year then ₹ 23.6/Month</td>
+                        <td>₹ 300 per year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card p-3 mt-4">
+            <h5>Brokerage Charges</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Angel One</th>
+                        <th>Zerodha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Intraday</td>
+                        <td>₹ 20 or 0.25% (Whichever is lower)</td>
+                        <td>₹ 20 or 0.03% / executed order whichever is lower</td>
+                    </tr>
+                    <tr>
+                        <td>Futures</td>
+                        <td>₹ 20 or 0.25% (Whichever is lower)</td>
+                        <td>₹ 20 or 0.03% / executed order whichever is lower</td>
+                    </tr>
+                    <tr>
+                        <td>Options</td>
+                        <td>₹ 20 or 0.25% (Whichever is lower)</td>
+                        <td>₹ 20 per executed order (on Turnover)</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery</td>
+                        <td>Zero</td>
+                        <td>Zero</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var ctx = document.getElementById('activeClientsChart').getContext('2d');
+        var activeClientsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22', '2022-23', '2023-24'],
+                datasets: [
+                    {
+                        label: 'Angel One',
+                        data: [3, 6, 9, 15, 21, 33, 48, 81],
+                        borderColor: 'orange',
+                        backgroundColor: 'transparent'
+                    },
+                    {
+                        label: 'Zerodha',
+                        data: [3, 6, 12, 18, 30, 45, 60, 78],
+                        borderColor: 'blue',
+                        backgroundColor: 'transparent'
+                    }
+                ]
+            }
+        });
+    </script>
+
+<style>
+    body { background-color: #f8f9fa; }
+    .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .btn-primary { background-color: #007bff; border-color: #007bff; }
+    .symbol-list { list-style-type: none; padding: 0; }
+    .symbol-list li { display: flex; align-items: center; padding: 10px 0; }
+    .symbol-list img { width: 30px; height: 30px; margin-right: 10px; }
+    .broker-card { text-align: center; padding: 20px; }
+    .broker-card img { width: 100px; margin-bottom: 10px; }
+    .rating { font-size: 1.5rem; color: #ffcc00; }
+    .table thead { background-color: #007bff; color: white; }
+</style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="card p-3 mt-4">
+        <h5>Complaints</h5>
+        <canvas id="complaintsChart"></canvas>
+    </div>
+    <div class="card p-3 mt-4">
+        <h5>Share Holding</h5>
+        <canvas id="shareHoldingChart"></canvas>
+    </div>
+</div>
+
+<script>
+    var ctxComplaints = document.getElementById('complaintsChart').getContext('2d');
+    var complaintsChart = new Chart(ctxComplaints, {
+        type: 'line',
+        data: {
+            labels: ['2018-19', '2019-20', '2020-21', '2021-22', '2022-23', '2023-24'],
+            datasets: [
+                {
+                    label: 'Angel One',
+                    data: [100, 200, 400, 1000, 700, 300],
+                    borderColor: 'orange',
+                    backgroundColor: 'transparent',
+                    pointStyle: 'circle',
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'Zerodha',
+                    data: [80, 190, 350, 900, 650, 250],
+                    borderColor: 'blue',
+                    backgroundColor: 'transparent',
+                    pointStyle: 'circle',
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }
+            ]
+        }
+    });
+
+    var ctxShareHolding = document.getElementById('shareHoldingChart').getContext('2d');
+    var shareHoldingChart = new Chart(ctxShareHolding, {
+        type: 'bar',
+        data: {
+            labels: ['Angel One', 'Zerodha'],
+            datasets: [
+                {
+                    label: 'Share Holding',
+                    data: [70, 50],
+                    backgroundColor: ['orange', 'blue']
+                }
+            ]
+        }
+    });
+</script>
+
+<div class="divider"></div>
+
+<div class="card p-3">
+    <h5>Pros & Cons</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <h6>Pros</h6>
+            <ul>
+                <li>Zero account opening and first-year AMC charges.</li>
+                <li>Zero brokerage for equity delivery.</li>
+                <li>Flat Rs. 20 per trade for intraday and F&O.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h6>Cons</h6>
+            <ul>
+                <li>Call & Trade fee of Rs. 20 per order.</li>
+                <li>Complex user interface, not beginner-friendly.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h6>Pros</h6>
+            <ul>
+                <li>Zero brokerage for CNC (cash-and-carry) delivery trades.</li>
+                <li>Flat Rs. 20 per order or 0.03%, whichever is lower.</li>
+                <li>Self-clearing broker, no clearing charges.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h6>Cons</h6>
+            <ul>
+                <li>No stock tips, research reports, or recommendations.</li>
+                <li>Additional Rs. 50 charge for unexecuted MIS/BO/CO trades.</li>
+                <li>No 3-in-1 trading account.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="col-md-3">
+    <div class="card p-3 text-center">
+        <h5>Angel One</h5>
+        <img src="https://th.bing.com/th/id/OIP.dFk-omU-lyzOGZ2z4Me6QAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Angel One Logo" class="logo">
+        <p class="rating">⭐ 4.7</p>
+        <p>Trust Factor: ⭐⭐⭐⭐</p>
+        <p>Ease of Use: ⭐⭐⭐⭐</p>
+        <p>Technology: ⭐⭐⭐⭐⭐</p>
+        <a href="https://www.angelone.in" class="btn btn-primary" target="_blank">Open Demat Account</a>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <div class="card p-3 text-center">
+        <h5>Zerodha</h5>
+        <img src="https://th.bing.com/th/id/OIP.ha9bOBx81vSww1HZzRBSNwAAAA?w=299&h=36&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Zerodha Logo" class="logo">
+        <p class="rating">⭐ 4.6</p>
+        <p>Trust Factor: ⭐⭐⭐⭐</p>
+        <p>Ease of Use: ⭐⭐⭐⭐</p>
+        <p>Technology: ⭐⭐⭐⭐⭐</p>
+        <a href="https://zerodha.com/open-account" class="btn btn-primary" target="_blank">Open Demat Account</a>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <canvas id="financialsChart"></canvas>
+</div>
+
+<script>
+    var ctx = document.getElementById('financialsChart').getContext('2d');
+    var financialsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Angel One - 2019-20', 'Zerodha - 2019-20', 'Angel One - 2020-21', 'Zerodha - 2020-21', 'Angel One - 2021-22', 'Zerodha - 2021-22', 'Angel One - 2022-23', 'Zerodha - 2022-23'],
+            datasets: [
+                {
+                    label: 'Revenue',
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1,
+                    data: [5000, 4500, 4000, 3500, 3000, 2500, 2000, 1500]
+                },
+                {
+                    label: 'Profit/Loss',
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1,
+                    data: [1000, 900, 800, 700, 600, 500, 400, 300]
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="https://www.nseindia.com/resources/exchange-communication-holidays" target="_blank">Market Timings & Holidays</a></li>
+                    <li><a href="https://www.cdslindia.com/publications/holidays.html" target="_blank">CDSL Holidays</a></li>
+                    <li><a href="https://www.nseindia.com/products/content/debt/ntrp/mrkt_timing_holidays.htm" target="_blank">NSE Market Timings</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Community Blogs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Offerings</h5>
+                <ul>
+                    <li><a href="#">Equity Trading</a></li>
+                    <li><a href="#">Commodity Trading</a></li>
+                    <li><a href="#">Currency Trading</a></li>
+                    <li><a href="#">Futures & Options</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Links</h5>
+                <ul>
+                    <li><a href="#">IPO</a></li>
+                    <li><a href="#">Brokers</a></li>
+                    <li><a href="#">Live News</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Policy</h5>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2025 BLUESTOCK. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
