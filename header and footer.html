@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Brokers - Bluestock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .broker-card {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .broker-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        /* Header styles */
+        .navbar-brand img {
+            height: 40px;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 15px;
+        }
+        .navbar-nav .btn {
+            margin-left: 10px;
+        }
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        .footer h5 {
+            font-weight: bold;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+        .footer ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://bluestock.in/app/dp.jpg" alt="BLUESTOCK Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">IPO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">COMMUNITY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BROKERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LIVE NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="#">Sign Up Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h2 class="text-primary">Made <span class="text-success">toTrade</span></h2>
+        
+        <div id="brokers-list"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="https://www.nseindia.com/resources/exchange-communication-holidays" target="_blank">Market Timings & Holidays</a></li>
+                        <li><a href="https://www.cdslindia.com/publications/holidays.html" target="_blank">CDSL Holidays</a></li>
+                        <li><a href="https://www.nseindia.com/products/content/debt/ntrp/mrkt_timing_holidays.htm" target="_blank">NSE Market Timings</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Community Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Offerings</h5>
+                    <ul>
+                        <li><a href="#">Equity Trading</a></li>
+                        <li><a href="#">Commodity Trading</a></li>
+                        <li><a href="#">Currency Trading</a></li>
+                        <li><a href="#">Futures & Options</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="#">IPO</a></li>
+                        <li><a href="#">Brokers</a></li>
+                        <li><a href="#">Live News</a></li>
+                        <li><a href="#">Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Policy</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2025 BLUESTOCK. All rights reserved.</p>
+            </div>
+        </div>
+
+        
+
+    <hr class="border-light">
+
+          <!-- Social Media & Branding -->
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-telegram"></i></a>
+            </div>
+            <img src="https://bluestock.in/app/dp.jpg" alt="Bluestock Logo" width="120">
+            <p class="mb-0">Bluestock Fintech, Pune, Maharashtra</p>
+        </div>
+
+        <hr class="border-light">
+
+        <!-- Disclaimer -->
+        <p class="text-center small text-muted">
+            Investment in securities markets is subject to market risks. Read all related documents carefully before investing.
+            <br>
+            For queries, contact <a href="mailto:hello@bluestock.in">hello@bluestock.in</a> or <a href="mailto:cto@bluestock.in">cto@bluestock.in</a>.
+            <br>
+            Disclaimer: We do not provide stock recommendations. Always consult a financial advisor before investing.
+        </p>
+
+        <p class="text-center text-muted mb-0">Made with ❤️ in Pune, Maharashtra</p>
+    </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<!-- CSS for spacing and alignment -->
+<style>
+    .footer-section {
+        flex: 1;
+        min-width: 150px;
+        margin-right: 20px;
+    }
+    .footer-section ul li a {
+        color: #ccc;
+        text-decoration: none;
+    }
+    .footer-section ul li a:hover {
+        text-decoration: underline;
+    }
+    </footer>
+
+    <script>
+        const brokers = [
+            { name: "HDFC Securities", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/HDFC_Bank_logo.svg/1024px-HDFC_Bank_logo.svg.png", color: "#d5c9ff", reviews: "15K", accounts: "50.2
+::contentReference[oaicite:0]{index=0}
+ 
